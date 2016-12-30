@@ -49,7 +49,7 @@ app.get('/:app-:version.bin', function(req, res, next) {
       console.log(filePath);
       var options = {
         headers: {
-          'Content-Disposition': 'attachment; filename=' + version.name
+          'Content-Disposition': 'attachment; filename="' + version.name + '"'
         }
       };
       res.sendFile(filePath, options);
